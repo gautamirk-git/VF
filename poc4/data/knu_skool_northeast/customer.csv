@@ -1,0 +1,11 @@
+product,region,week_start,returns,review_sentiment
+Vans Knu Skool,Northeast,2026-06-01,9,0.344
+Vans Knu Skool,Northeast,2026-06-08,9,0.259
+Vans Knu Skool,Northeast,2026-06-15,10,0.21
+Vans Knu Skool,Northeast,2026-06-22,11,0.216
+Vans Knu Skool,Northeast,2026-06-29,12,0.152
+Vans Knu Skool,Northeast,2026-07-06,13,0.123
+Vans Knu Skool,Northeast,2026-07-13,14,-0.038
+Vans Knu Skool,Northeast,2026-07-20,15,0.041
+Vans Knu Skool,Northeast,2026-07-27,15,-0.001
+Vans Knu Skool,Northeast,2026-08-03,16,-0.042

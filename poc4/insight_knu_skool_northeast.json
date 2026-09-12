@@ -1,0 +1,298 @@
+{
+  "scenario": "knu_skool_northeast",
+  "product": "Vans Knu Skool",
+  "region": "Northeast",
+  "week_start": "2026-06-01",
+  "week_end": "2026-08-03",
+  "headline": "Product Problem \u2014 Vans Knu Skool, Northeast",
+  "situation_type": "Product Problem",
+  "triggered": true,
+  "confidence": 80,
+  "narrative": "Sales are still up 18%, but returns have risen 78% and review sentiment has dropped 0.39 points over the window (ending at -0.04) \u2014 worth a quality check before it drags sales down too.",
+  "signals": {
+    "sales_cum_pct": 17.8,
+    "returns_cum_pct": 77.8,
+    "sentiment_delta": -0.386
+  },
+  "recommendation": {
+    "action": "Flag for merchandising/quality review \u2014 check the product for a defect or sizing/fit issue before the next replenishment order."
+  },
+  "all_rule_results": {
+    "Opportunity": {
+      "triggered": false,
+      "confidence": 0
+    },
+    "Product Problem": {
+      "triggered": true,
+      "confidence": 80
+    },
+    "Demand Not Converting": {
+      "triggered": false,
+      "confidence": 0
+    }
+  },
+  "evidence_weekly": [
+    {
+      "week_start": "2026-06-01",
+      "searches": 1150,
+      "views": 1937,
+      "conversion_rate": 0.0527,
+      "on_promo": false,
+      "units_sold": 135,
+      "vans_inventory_units": 1700,
+      "returns": 9,
+      "review_sentiment": 0.344
+    },
+    {
+      "week_start": "2026-06-08",
+      "searches": 1153,
+      "views": 1972,
+      "conversion_rate": 0.0488,
+      "on_promo": false,
+      "units_sold": 138,
+      "vans_inventory_units": 1695,
+      "returns": 9,
+      "review_sentiment": 0.259
+    },
+    {
+      "week_start": "2026-06-15",
+      "searches": 1157,
+      "views": 1913,
+      "conversion_rate": 0.0477,
+      "on_promo": false,
+      "units_sold": 140,
+      "vans_inventory_units": 1691,
+      "returns": 10,
+      "review_sentiment": 0.21
+    },
+    {
+      "week_start": "2026-06-22",
+      "searches": 1160,
+      "views": 1954,
+      "conversion_rate": 0.0518,
+      "on_promo": false,
+      "units_sold": 143,
+      "vans_inventory_units": 1687,
+      "returns": 11,
+      "review_sentiment": 0.216
+    },
+    {
+      "week_start": "2026-06-29",
+      "searches": 1163,
+      "views": 1929,
+      "conversion_rate": 0.0441,
+      "on_promo": false,
+      "units_sold": 146,
+      "vans_inventory_units": 1682,
+      "returns": 12,
+      "review_sentiment": 0.152
+    },
+    {
+      "week_start": "2026-07-06",
+      "searches": 1167,
+      "views": 2038,
+      "conversion_rate": 0.0459,
+      "on_promo": false,
+      "units_sold": 149,
+      "vans_inventory_units": 1678,
+      "returns": 13,
+      "review_sentiment": 0.123
+    },
+    {
+      "week_start": "2026-07-13",
+      "searches": 1170,
+      "views": 2000,
+      "conversion_rate": 0.0558,
+      "on_promo": false,
+      "units_sold": 151,
+      "vans_inventory_units": 1673,
+      "returns": 14,
+      "review_sentiment": -0.038
+    },
+    {
+      "week_start": "2026-07-20",
+      "searches": 1173,
+      "views": 1995,
+      "conversion_rate": 0.0522,
+      "on_promo": false,
+      "units_sold": 154,
+      "vans_inventory_units": 1669,
+      "returns": 15,
+      "review_sentiment": 0.041
+    },
+    {
+      "week_start": "2026-07-27",
+      "searches": 1177,
+      "views": 2057,
+      "conversion_rate": 0.056,
+      "on_promo": false,
+      "units_sold": 157,
+      "vans_inventory_units": 1665,
+      "returns": 15,
+      "review_sentiment": -0.001
+    },
+    {
+      "week_start": "2026-08-03",
+      "searches": 1180,
+      "views": 1991,
+      "conversion_rate": 0.052,
+      "on_promo": false,
+      "units_sold": 159,
+      "vans_inventory_units": 1660,
+      "returns": 16,
+      "review_sentiment": -0.042
+    }
+  ],
+  "evidence_dealer_weekly": [
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-06-01",
+      "dealer_inventory_units": 78
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-06-08",
+      "dealer_inventory_units": 78
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-06-15",
+      "dealer_inventory_units": 77
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-06-22",
+      "dealer_inventory_units": 77
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-06-29",
+      "dealer_inventory_units": 77
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-07-06",
+      "dealer_inventory_units": 76
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-07-13",
+      "dealer_inventory_units": 76
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-07-20",
+      "dealer_inventory_units": 76
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-07-27",
+      "dealer_inventory_units": 75
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-08-03",
+      "dealer_inventory_units": 75
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-06-01",
+      "dealer_inventory_units": 58
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-06-08",
+      "dealer_inventory_units": 58
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-06-15",
+      "dealer_inventory_units": 58
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-06-22",
+      "dealer_inventory_units": 59
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-06-29",
+      "dealer_inventory_units": 59
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-07-06",
+      "dealer_inventory_units": 59
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-07-13",
+      "dealer_inventory_units": 59
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-07-20",
+      "dealer_inventory_units": 60
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-07-27",
+      "dealer_inventory_units": 60
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-08-03",
+      "dealer_inventory_units": 60
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-06-01",
+      "dealer_inventory_units": 68
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-06-08",
+      "dealer_inventory_units": 68
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-06-15",
+      "dealer_inventory_units": 68
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-06-22",
+      "dealer_inventory_units": 68
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-06-29",
+      "dealer_inventory_units": 68
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-07-06",
+      "dealer_inventory_units": 67
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-07-13",
+      "dealer_inventory_units": 67
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-07-20",
+      "dealer_inventory_units": 67
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-07-27",
+      "dealer_inventory_units": 67
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-08-03",
+      "dealer_inventory_units": 67
+    }
+  ]
+}

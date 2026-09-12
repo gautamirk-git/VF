@@ -1,0 +1,11 @@
+product,region,week_start,returns,review_sentiment
+Vans Old Skool,Northeast,2026-06-01,8,0.325
+Vans Old Skool,Northeast,2026-06-08,8,0.3
+Vans Old Skool,Northeast,2026-06-15,8,0.367
+Vans Old Skool,Northeast,2026-06-22,8,0.284
+Vans Old Skool,Northeast,2026-06-29,8,0.302
+Vans Old Skool,Northeast,2026-07-06,8,0.349
+Vans Old Skool,Northeast,2026-07-13,8,0.347
+Vans Old Skool,Northeast,2026-07-20,9,0.333
+Vans Old Skool,Northeast,2026-07-27,9,0.378
+Vans Old Skool,Northeast,2026-08-03,9,0.296
