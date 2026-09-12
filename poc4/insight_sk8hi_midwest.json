@@ -1,0 +1,298 @@
+{
+  "scenario": "sk8hi_midwest",
+  "product": "Vans Sk8-Hi",
+  "region": "Midwest",
+  "week_start": "2026-06-01",
+  "week_end": "2026-08-03",
+  "headline": "Product Problem \u2014 Vans Sk8-Hi, Midwest",
+  "situation_type": "Product Problem",
+  "triggered": true,
+  "confidence": 90,
+  "narrative": "Sales are still up 18%, but returns have risen 88% and review sentiment has dropped 0.62 points over the window (ending at -0.27) \u2014 worth a quality check before it drags sales down too.",
+  "signals": {
+    "sales_cum_pct": 17.9,
+    "returns_cum_pct": 87.5,
+    "sentiment_delta": -0.62
+  },
+  "recommendation": {
+    "action": "Flag for merchandising/quality review \u2014 check the product for a defect or sizing/fit issue before the next replenishment order."
+  },
+  "all_rule_results": {
+    "Opportunity": {
+      "triggered": false,
+      "confidence": 0
+    },
+    "Product Problem": {
+      "triggered": true,
+      "confidence": 90
+    },
+    "Demand Not Converting": {
+      "triggered": false,
+      "confidence": 0
+    }
+  },
+  "evidence_weekly": [
+    {
+      "week_start": "2026-06-01",
+      "searches": 1200,
+      "views": 2016,
+      "conversion_rate": 0.0446,
+      "on_promo": false,
+      "units_sold": 140,
+      "vans_inventory_units": 1800,
+      "returns": 8,
+      "review_sentiment": 0.349
+    },
+    {
+      "week_start": "2026-06-08",
+      "searches": 1204,
+      "views": 2020,
+      "conversion_rate": 0.0512,
+      "on_promo": false,
+      "units_sold": 143,
+      "vans_inventory_units": 1794,
+      "returns": 9,
+      "review_sentiment": 0.312
+    },
+    {
+      "week_start": "2026-06-15",
+      "searches": 1208,
+      "views": 2024,
+      "conversion_rate": 0.0472,
+      "on_promo": false,
+      "units_sold": 145,
+      "vans_inventory_units": 1788,
+      "returns": 10,
+      "review_sentiment": 0.216
+    },
+    {
+      "week_start": "2026-06-22",
+      "searches": 1212,
+      "views": 2054,
+      "conversion_rate": 0.0534,
+      "on_promo": false,
+      "units_sold": 148,
+      "vans_inventory_units": 1782,
+      "returns": 10,
+      "review_sentiment": 0.203
+    },
+    {
+      "week_start": "2026-06-29",
+      "searches": 1216,
+      "views": 2068,
+      "conversion_rate": 0.0531,
+      "on_promo": false,
+      "units_sold": 151,
+      "vans_inventory_units": 1776,
+      "returns": 11,
+      "review_sentiment": 0.105
+    },
+    {
+      "week_start": "2026-07-06",
+      "searches": 1220,
+      "views": 2080,
+      "conversion_rate": 0.0518,
+      "on_promo": false,
+      "units_sold": 154,
+      "vans_inventory_units": 1770,
+      "returns": 12,
+      "review_sentiment": 0.065
+    },
+    {
+      "week_start": "2026-07-13",
+      "searches": 1224,
+      "views": 2141,
+      "conversion_rate": 0.0426,
+      "on_promo": false,
+      "units_sold": 157,
+      "vans_inventory_units": 1764,
+      "returns": 13,
+      "review_sentiment": -0.062
+    },
+    {
+      "week_start": "2026-07-20",
+      "searches": 1228,
+      "views": 2124,
+      "conversion_rate": 0.0506,
+      "on_promo": false,
+      "units_sold": 160,
+      "vans_inventory_units": 1758,
+      "returns": 13,
+      "review_sentiment": -0.066
+    },
+    {
+      "week_start": "2026-07-27",
+      "searches": 1232,
+      "views": 2109,
+      "conversion_rate": 0.0527,
+      "on_promo": false,
+      "units_sold": 162,
+      "vans_inventory_units": 1752,
+      "returns": 14,
+      "review_sentiment": -0.198
+    },
+    {
+      "week_start": "2026-08-03",
+      "searches": 1236,
+      "views": 2161,
+      "conversion_rate": 0.0535,
+      "on_promo": false,
+      "units_sold": 165,
+      "vans_inventory_units": 1746,
+      "returns": 15,
+      "review_sentiment": -0.271
+    }
+  ],
+  "evidence_dealer_weekly": [
+    {
+      "dealer": "Journeys - Chicago",
+      "week_start": "2026-06-01",
+      "dealer_inventory_units": 80
+    },
+    {
+      "dealer": "Journeys - Chicago",
+      "week_start": "2026-06-08",
+      "dealer_inventory_units": 80
+    },
+    {
+      "dealer": "Journeys - Chicago",
+      "week_start": "2026-06-15",
+      "dealer_inventory_units": 79
+    },
+    {
+      "dealer": "Journeys - Chicago",
+      "week_start": "2026-06-22",
+      "dealer_inventory_units": 79
+    },
+    {
+      "dealer": "Journeys - Chicago",
+      "week_start": "2026-06-29",
+      "dealer_inventory_units": 78
+    },
+    {
+      "dealer": "Journeys - Chicago",
+      "week_start": "2026-07-06",
+      "dealer_inventory_units": 78
+    },
+    {
+      "dealer": "Journeys - Chicago",
+      "week_start": "2026-07-13",
+      "dealer_inventory_units": 77
+    },
+    {
+      "dealer": "Journeys - Chicago",
+      "week_start": "2026-07-20",
+      "dealer_inventory_units": 77
+    },
+    {
+      "dealer": "Journeys - Chicago",
+      "week_start": "2026-07-27",
+      "dealer_inventory_units": 77
+    },
+    {
+      "dealer": "Journeys - Chicago",
+      "week_start": "2026-08-03",
+      "dealer_inventory_units": 76
+    },
+    {
+      "dealer": "PacSun - Minneapolis",
+      "week_start": "2026-06-01",
+      "dealer_inventory_units": 70
+    },
+    {
+      "dealer": "PacSun - Minneapolis",
+      "week_start": "2026-06-08",
+      "dealer_inventory_units": 70
+    },
+    {
+      "dealer": "PacSun - Minneapolis",
+      "week_start": "2026-06-15",
+      "dealer_inventory_units": 70
+    },
+    {
+      "dealer": "PacSun - Minneapolis",
+      "week_start": "2026-06-22",
+      "dealer_inventory_units": 69
+    },
+    {
+      "dealer": "PacSun - Minneapolis",
+      "week_start": "2026-06-29",
+      "dealer_inventory_units": 69
+    },
+    {
+      "dealer": "PacSun - Minneapolis",
+      "week_start": "2026-07-06",
+      "dealer_inventory_units": 69
+    },
+    {
+      "dealer": "PacSun - Minneapolis",
+      "week_start": "2026-07-13",
+      "dealer_inventory_units": 69
+    },
+    {
+      "dealer": "PacSun - Minneapolis",
+      "week_start": "2026-07-20",
+      "dealer_inventory_units": 68
+    },
+    {
+      "dealer": "PacSun - Minneapolis",
+      "week_start": "2026-07-27",
+      "dealer_inventory_units": 68
+    },
+    {
+      "dealer": "PacSun - Minneapolis",
+      "week_start": "2026-08-03",
+      "dealer_inventory_units": 68
+    },
+    {
+      "dealer": "Zumiez - Columbus",
+      "week_start": "2026-06-01",
+      "dealer_inventory_units": 65
+    },
+    {
+      "dealer": "Zumiez - Columbus",
+      "week_start": "2026-06-08",
+      "dealer_inventory_units": 65
+    },
+    {
+      "dealer": "Zumiez - Columbus",
+      "week_start": "2026-06-15",
+      "dealer_inventory_units": 65
+    },
+    {
+      "dealer": "Zumiez - Columbus",
+      "week_start": "2026-06-22",
+      "dealer_inventory_units": 66
+    },
+    {
+      "dealer": "Zumiez - Columbus",
+      "week_start": "2026-06-29",
+      "dealer_inventory_units": 66
+    },
+    {
+      "dealer": "Zumiez - Columbus",
+      "week_start": "2026-07-06",
+      "dealer_inventory_units": 66
+    },
+    {
+      "dealer": "Zumiez - Columbus",
+      "week_start": "2026-07-13",
+      "dealer_inventory_units": 66
+    },
+    {
+      "dealer": "Zumiez - Columbus",
+      "week_start": "2026-07-20",
+      "dealer_inventory_units": 67
+    },
+    {
+      "dealer": "Zumiez - Columbus",
+      "week_start": "2026-07-27",
+      "dealer_inventory_units": 67
+    },
+    {
+      "dealer": "Zumiez - Columbus",
+      "week_start": "2026-08-03",
+      "dealer_inventory_units": 67
+    }
+  ]
+}
