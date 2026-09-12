@@ -1,0 +1,320 @@
+{
+  "scenario": "old_skool_northeast",
+  "product": "Vans Old Skool",
+  "region": "Northeast",
+  "week_start": "2026-06-01",
+  "week_end": "2026-08-03",
+  "headline": "Opportunity \u2014 Vans Old Skool, Northeast",
+  "situation_type": "Opportunity",
+  "triggered": true,
+  "confidence": 82,
+  "narrative": "Search is up 18% and sales are up 20% over the window, while Vans-side inventory has fallen 19%. Journeys - Boston is also running low (46 units on hand, down 39% over the window) \u2014 reach out about reallocating or replenishing stock before this becomes a stockout.",
+  "signals": {
+    "search_cum_pct": 18.2,
+    "sales_cum_pct": 20.0,
+    "vans_inventory_cum_pct": -18.6
+  },
+  "recommendation": {
+    "action": "Flag for the stocker to contact the dealer(s) below about reallocating/replenishing stock.",
+    "dealers": [
+      {
+        "dealer": "Journeys - Boston",
+        "current_units": 46,
+        "pct_change_over_window": -38.7,
+        "flagged_low": true
+      },
+      {
+        "dealer": "Tilly's - Philadelphia",
+        "current_units": 58,
+        "pct_change_over_window": 5.5,
+        "flagged_low": false
+      },
+      {
+        "dealer": "Zumiez - New York",
+        "current_units": 60,
+        "pct_change_over_window": -7.7,
+        "flagged_low": false
+      }
+    ]
+  },
+  "promo_share_pct": 0.0,
+  "promo_influenced": false,
+  "all_rule_results": {
+    "Opportunity": {
+      "triggered": true,
+      "confidence": 82
+    },
+    "Product Problem": {
+      "triggered": false,
+      "confidence": 0
+    },
+    "Demand Not Converting": {
+      "triggered": false,
+      "confidence": 0
+    }
+  },
+  "evidence_weekly": [
+    {
+      "week_start": "2026-06-01",
+      "searches": 1100,
+      "views": 1903,
+      "conversion_rate": 0.0476,
+      "on_promo": false,
+      "units_sold": 130,
+      "vans_inventory_units": 1599,
+      "returns": 8,
+      "review_sentiment": 0.325
+    },
+    {
+      "week_start": "2026-06-08",
+      "searches": 1121,
+      "views": 1926,
+      "conversion_rate": 0.052,
+      "on_promo": false,
+      "units_sold": 133,
+      "vans_inventory_units": 1568,
+      "returns": 8,
+      "review_sentiment": 0.3
+    },
+    {
+      "week_start": "2026-06-15",
+      "searches": 1145,
+      "views": 1943,
+      "conversion_rate": 0.0499,
+      "on_promo": false,
+      "units_sold": 136,
+      "vans_inventory_units": 1534,
+      "returns": 8,
+      "review_sentiment": 0.367
+    },
+    {
+      "week_start": "2026-06-22",
+      "searches": 1167,
+      "views": 1929,
+      "conversion_rate": 0.0497,
+      "on_promo": false,
+      "units_sold": 139,
+      "vans_inventory_units": 1501,
+      "returns": 8,
+      "review_sentiment": 0.284
+    },
+    {
+      "week_start": "2026-06-29",
+      "searches": 1189,
+      "views": 2068,
+      "conversion_rate": 0.0446,
+      "on_promo": false,
+      "units_sold": 141,
+      "vans_inventory_units": 1466,
+      "returns": 8,
+      "review_sentiment": 0.302
+    },
+    {
+      "week_start": "2026-07-06",
+      "searches": 1211,
+      "views": 2068,
+      "conversion_rate": 0.0528,
+      "on_promo": false,
+      "units_sold": 145,
+      "vans_inventory_units": 1432,
+      "returns": 8,
+      "review_sentiment": 0.349
+    },
+    {
+      "week_start": "2026-07-13",
+      "searches": 1234,
+      "views": 2085,
+      "conversion_rate": 0.0533,
+      "on_promo": false,
+      "units_sold": 147,
+      "vans_inventory_units": 1399,
+      "returns": 8,
+      "review_sentiment": 0.347
+    },
+    {
+      "week_start": "2026-07-20",
+      "searches": 1256,
+      "views": 2117,
+      "conversion_rate": 0.0573,
+      "on_promo": false,
+      "units_sold": 150,
+      "vans_inventory_units": 1366,
+      "returns": 9,
+      "review_sentiment": 0.333
+    },
+    {
+      "week_start": "2026-07-27",
+      "searches": 1278,
+      "views": 2192,
+      "conversion_rate": 0.0584,
+      "on_promo": false,
+      "units_sold": 153,
+      "vans_inventory_units": 1334,
+      "returns": 9,
+      "review_sentiment": 0.378
+    },
+    {
+      "week_start": "2026-08-03",
+      "searches": 1300,
+      "views": 2191,
+      "conversion_rate": 0.0558,
+      "on_promo": false,
+      "units_sold": 156,
+      "vans_inventory_units": 1301,
+      "returns": 9,
+      "review_sentiment": 0.296
+    }
+  ],
+  "evidence_dealer_weekly": [
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-06-01",
+      "dealer_inventory_units": 75
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-06-08",
+      "dealer_inventory_units": 72
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-06-15",
+      "dealer_inventory_units": 69
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-06-22",
+      "dealer_inventory_units": 65
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-06-29",
+      "dealer_inventory_units": 62
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-07-06",
+      "dealer_inventory_units": 59
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-07-13",
+      "dealer_inventory_units": 56
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-07-20",
+      "dealer_inventory_units": 53
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-07-27",
+      "dealer_inventory_units": 49
+    },
+    {
+      "dealer": "Journeys - Boston",
+      "week_start": "2026-08-03",
+      "dealer_inventory_units": 46
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-06-01",
+      "dealer_inventory_units": 55
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-06-08",
+      "dealer_inventory_units": 55
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-06-15",
+      "dealer_inventory_units": 56
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-06-22",
+      "dealer_inventory_units": 56
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-06-29",
+      "dealer_inventory_units": 56
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-07-06",
+      "dealer_inventory_units": 57
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-07-13",
+      "dealer_inventory_units": 57
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-07-20",
+      "dealer_inventory_units": 57
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-07-27",
+      "dealer_inventory_units": 58
+    },
+    {
+      "dealer": "Tilly's - Philadelphia",
+      "week_start": "2026-08-03",
+      "dealer_inventory_units": 58
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-06-01",
+      "dealer_inventory_units": 65
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-06-08",
+      "dealer_inventory_units": 64
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-06-15",
+      "dealer_inventory_units": 64
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-06-22",
+      "dealer_inventory_units": 63
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-06-29",
+      "dealer_inventory_units": 63
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-07-06",
+      "dealer_inventory_units": 62
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-07-13",
+      "dealer_inventory_units": 62
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-07-20",
+      "dealer_inventory_units": 61
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-07-27",
+      "dealer_inventory_units": 61
+    },
+    {
+      "dealer": "Zumiez - New York",
+      "week_start": "2026-08-03",
+      "dealer_inventory_units": 60
+    }
+  ]
+}
