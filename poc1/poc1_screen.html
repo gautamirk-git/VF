@@ -1,0 +1,245 @@
+<title>Vans Knu Skool: West Coast Signal</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root{
+    --ink:#1B2430; --muted:#5B6472; --paper:#F4F6F9; --surface:#FFFFFF;
+    --border:#D9DEE6; --border-strong:#C3CAD6;
+    --core:#2F6690; --core-soft:#E4EEF4;
+    --accent:#C87F1E; --accent-soft:#FBEBD4;
+    --chart-blue:#2a78d6; --chart-orange:#eb6834; --chart-aqua:#1baf7a;
+    --status-critical:#d03b3b; --status-critical-soft:#FBE7E7;
+    --muted-fill:#C3CAD6;
+    --font-display:'Archivo','Arial Narrow',sans-serif;
+    --font-body:'IBM Plex Sans',-apple-system,sans-serif;
+    --font-mono:'IBM Plex Mono','SFMono-Regular',monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#E8EBF1; --muted:#98A1B2; --paper:#10141B; --surface:#171C25;
+      --border:#2B323F; --border-strong:#3A4353;
+      --core:#7FB2D6; --core-soft:#1C2E3B;
+      --accent:#E8A94C; --accent-soft:#3A2C15;
+      --chart-blue:#3987e5; --chart-orange:#d95926; --chart-aqua:#199e70;
+      --status-critical:#e66767; --status-critical-soft:#3A1E1E;
+      --muted-fill:#3A4353;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#E8EBF1; --muted:#98A1B2; --paper:#10141B; --surface:#171C25;
+    --border:#2B323F; --border-strong:#3A4353;
+    --core:#7FB2D6; --core-soft:#1C2E3B;
+    --accent:#E8A94C; --accent-soft:#3A2C15;
+    --chart-blue:#3987e5; --chart-orange:#d95926; --chart-aqua:#199e70;
+    --status-critical:#e66767; --status-critical-soft:#3A1E1E;
+    --muted-fill:#3A4353;
+  }
+
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);padding:40px 20px 64px;}
+  .page{max-width:940px;margin:0 auto;display:flex;flex-direction:column;gap:32px;}
+
+  header{display:flex;flex-direction:column;gap:12px;}
+  .brandrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+  .kicker{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted);}
+  h1{font-family:var(--font-display);font-weight:700;font-size:clamp(22px,4vw,29px);letter-spacing:-0.01em;margin:0;text-wrap:balance;}
+  .metarow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+  .pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11.5px;color:var(--muted);border:1px solid var(--border-strong);border-radius:999px;padding:4px 11px;}
+  .pill.hot{color:var(--accent);border-color:var(--accent);}
+  .pill .dot{width:6px;height:6px;border-radius:50%;background:currentColor;}
+
+  .narrative{font-size:15px;line-height:1.65;color:var(--ink);max-width:74ch;}
+
+  .reco{
+    display:flex; gap:14px; align-items:flex-start;
+    background:var(--accent-soft); border:1px solid var(--accent);
+    border-radius:10px; padding:16px 18px;
+  }
+  .reco .label{font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);font-weight:600;}
+  .reco p{margin:4px 0 0;font-size:14px;line-height:1.55;color:var(--ink);}
+
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px clamp(10px,3vw,26px) 18px;position:relative;}
+  .card h2{font-family:var(--font-display);font-weight:700;font-size:16px;margin:0 0 4px;color:var(--ink);}
+  .card .sub{font-size:12.5px;color:var(--muted);margin:0 0 10px;}
+  svg.chart{display:block;width:100%;height:auto;overflow:visible;}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:6px;}
+  .legend span{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);}
+  .legend i{width:10px;height:10px;border-radius:2px;display:inline-block;}
+
+  #tooltip{
+    position:absolute; pointer-events:none; background:var(--ink); color:var(--paper);
+    font-family:var(--font-mono); font-size:11.5px; line-height:1.5; padding:8px 10px;
+    border-radius:6px; opacity:0; transform:translate(-50%,-110%); transition:opacity .08s;
+    white-space:nowrap; z-index:5;
+  }
+  :root[data-theme="dark"] #tooltip, @media (prefers-color-scheme:dark){ #tooltip{} }
+
+  details.why{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:4px 20px;}
+  details.why summary{cursor:pointer;font-family:var(--font-display);font-weight:700;font-size:15px;padding:14px 0;color:var(--ink);list-style:none;display:flex;align-items:center;gap:8px;}
+  details.why summary::-webkit-details-marker{display:none;}
+  details.why summary::before{content:"+";font-family:var(--font-mono);color:var(--core);width:18px;}
+  details.why[open] summary::before{content:"–";}
+  details.why .why-body{padding:0 0 18px;}
+  .rule-box{background:var(--paper);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-family:var(--font-mono);font-size:12px;line-height:1.7;color:var(--ink);margin-bottom:16px;}
+  .rule-box b{color:var(--core);}
+
+  .table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:8px;margin-bottom:16px;}
+  table{border-collapse:collapse;width:100%;min-width:640px;font-size:12.5px;}
+  th,td{text-align:left;padding:8px 12px;border-bottom:1px solid var(--border);font-variant-numeric:tabular-nums;}
+  thead th{font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);font-weight:500;background:var(--paper);}
+  tbody tr:last-child td{border-bottom:none;}
+
+  footer{font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:16px;line-height:1.6;}
+
+  @media (max-width:640px){ .legend{gap:12px;} }
+</style>
+
+<div class="page">
+
+  <header>
+    <div class="brandrow">
+      <svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true">
+        <line x1="6" y1="23" x2="15" y2="7" stroke="var(--border-strong)" stroke-width="1.5"/>
+        <line x1="15" y1="7" x2="24" y2="23" stroke="var(--border-strong)" stroke-width="1.5"/>
+        <line x1="6" y1="23" x2="24" y2="23" stroke="var(--border-strong)" stroke-width="1.5"/>
+        <circle cx="6" cy="23" r="3" fill="var(--core)"/>
+        <circle cx="24" cy="23" r="3" fill="var(--core)"/>
+        <circle cx="15" cy="7" r="3.5" fill="var(--accent)"/>
+      </svg>
+      <span class="kicker">DotIQ Insight · POC1</span>
+    </div>
+    <h1>Revenue Opportunity — Vans Knu Skool, West Coast</h1>
+    <div class="metarow">
+      <span class="pill hot"><span class="dot"></span>96% confidence</span>
+      <span class="pill">2026-06-01 → 2026-08-03 · 10 weeks</span>
+      <span class="pill">Situation: Opportunity</span>
+    </div>
+    <p class="narrative">Search is up 30% and sales are up 22% over the last 10 weeks in West Coast, while Vans-side inventory has fallen 35%. PacSun - San Diego is also running low (28 units on hand, down 69% over the window) — reach out about reallocating or replenishing stock before this becomes a stockout.</p>
+  </header>
+
+  <div class="reco">
+    <div>
+      <div class="label">Recommended action</div>
+      <p>Flag for the stocker to contact the dealer(s) below about reallocating/replenishing stock.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Signals — indexed to week 1 = 100</h2>
+    <p class="sub">Search, sales, and Vans-side inventory over the 10-week window. Hover a point for the underlying weekly number.</p>
+    <svg class="chart" viewBox="0 0 900 340" role="img" aria-label="Line chart: search index rises to 130, sales index rises to 122, and Vans inventory index falls to 65, all indexed to 100 at week 1.">
+      <line x1="46" y1="155.6" x2="854" y2="155.6" stroke="var(--border)" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="858" y="158.6" font-family="var(--font-mono)" font-size="9.5" fill="var(--muted)">100</text>
+      <path d="M 46.0,155.6 L 135.8,145.0 L 225.6,133.3 L 315.3,121.9 L 405.1,111.5 L 494.9,100.2 L 584.7,88.8 L 674.4,77.8 L 764.2,66.4 L 854.0,55.7" fill="none" stroke="var(--chart-blue)" stroke-width="2"/>
+      <path d="M 46.0,155.6 L 135.8,148.6 L 225.6,138.9 L 315.3,131.9 L 405.1,122.2 L 494.9,115.2 L 584.7,105.5 L 674.4,98.5 L 764.2,91.2 L 854.0,81.8" fill="none" stroke="var(--chart-orange)" stroke-width="2"/>
+      <path d="M 46.0,155.6 L 135.8,168.7 L 225.6,182.0 L 315.3,194.7 L 405.1,207.8 L 494.9,220.8 L 584.7,233.5 L 674.4,246.9 L 764.2,259.6 L 854.0,272.6" fill="none" stroke="var(--chart-aqua)" stroke-width="2"/>
+      <circle class="pt" data-series="Search" data-week="2026-06-01" data-value="1200" data-index="100.0" cx="46.0" cy="155.6" r="3.4" fill="var(--chart-blue)" /><circle class="pt" data-series="Search" data-week="2026-06-08" data-value="1239" data-index="103.2" cx="135.8" cy="145.0" r="3.4" fill="var(--chart-blue)" /><circle class="pt" data-series="Search" data-week="2026-06-15" data-value="1281" data-index="106.7" cx="225.6" cy="133.3" r="3.4" fill="var(--chart-blue)" /><circle class="pt" data-series="Search" data-week="2026-06-22" data-value="1321" data-index="110.1" cx="315.3" cy="121.9" r="3.4" fill="var(--chart-blue)" /><circle class="pt" data-series="Search" data-week="2026-06-29" data-value="1359" data-index="113.2" cx="405.1" cy="111.5" r="3.4" fill="var(--chart-blue)" /><circle class="pt" data-series="Search" data-week="2026-07-06" data-value="1399" data-index="116.6" cx="494.9" cy="100.2" r="3.4" fill="var(--chart-blue)" /><circle class="pt" data-series="Search" data-week="2026-07-13" data-value="1440" data-index="120.0" cx="584.7" cy="88.8" r="3.4" fill="var(--chart-blue)" /><circle class="pt" data-series="Search" data-week="2026-07-20" data-value="1480" data-index="123.3" cx="674.4" cy="77.8" r="3.4" fill="var(--chart-blue)" /><circle class="pt" data-series="Search" data-week="2026-07-27" data-value="1520" data-index="126.7" cx="764.2" cy="66.4" r="3.4" fill="var(--chart-blue)" /><circle class="pt" data-series="Search" data-week="2026-08-03" data-value="1559" data-index="129.9" cx="854.0" cy="55.7" r="3.4" fill="var(--chart-blue)" /><circle class="pt" data-series="Sales" data-week="2026-06-01" data-value="140" data-index="100.0" cx="46.0" cy="155.6" r="3.4" fill="var(--chart-orange)" /><circle class="pt" data-series="Sales" data-week="2026-06-08" data-value="143" data-index="102.1" cx="135.8" cy="148.6" r="3.4" fill="var(--chart-orange)" /><circle class="pt" data-series="Sales" data-week="2026-06-15" data-value="147" data-index="105.0" cx="225.6" cy="138.9" r="3.4" fill="var(--chart-orange)" /><circle class="pt" data-series="Sales" data-week="2026-06-22" data-value="150" data-index="107.1" cx="315.3" cy="131.9" r="3.4" fill="var(--chart-orange)" /><circle class="pt" data-series="Sales" data-week="2026-06-29" data-value="154" data-index="110.0" cx="405.1" cy="122.2" r="3.4" fill="var(--chart-orange)" /><circle class="pt" data-series="Sales" data-week="2026-07-06" data-value="157" data-index="112.1" cx="494.9" cy="115.2" r="3.4" fill="var(--chart-orange)" /><circle class="pt" data-series="Sales" data-week="2026-07-13" data-value="161" data-index="115.0" cx="584.7" cy="105.5" r="3.4" fill="var(--chart-orange)" /><circle class="pt" data-series="Sales" data-week="2026-07-20" data-value="164" data-index="117.1" cx="674.4" cy="98.5" r="3.4" fill="var(--chart-orange)" /><circle class="pt" data-series="Sales" data-week="2026-07-27" data-value="167" data-index="119.3" cx="764.2" cy="91.2" r="3.4" fill="var(--chart-orange)" /><circle class="pt" data-series="Sales" data-week="2026-08-03" data-value="171" data-index="122.1" cx="854.0" cy="81.8" r="3.4" fill="var(--chart-orange)" /><circle class="pt" data-series="Vans Inventory" data-week="2026-06-01" data-value="1801" data-index="100.0" cx="46.0" cy="155.6" r="3.4" fill="var(--chart-aqua)" /><circle class="pt" data-series="Vans Inventory" data-week="2026-06-08" data-value="1731" data-index="96.1" cx="135.8" cy="168.7" r="3.4" fill="var(--chart-aqua)" /><circle class="pt" data-series="Vans Inventory" data-week="2026-06-15" data-value="1659" data-index="92.1" cx="225.6" cy="182.0" r="3.4" fill="var(--chart-aqua)" /><circle class="pt" data-series="Vans Inventory" data-week="2026-06-22" data-value="1590" data-index="88.3" cx="315.3" cy="194.7" r="3.4" fill="var(--chart-aqua)" /><circle class="pt" data-series="Vans Inventory" data-week="2026-06-29" data-value="1520" data-index="84.4" cx="405.1" cy="207.8" r="3.4" fill="var(--chart-aqua)" /><circle class="pt" data-series="Vans Inventory" data-week="2026-07-06" data-value="1450" data-index="80.5" cx="494.9" cy="220.8" r="3.4" fill="var(--chart-aqua)" /><circle class="pt" data-series="Vans Inventory" data-week="2026-07-13" data-value="1381" data-index="76.7" cx="584.7" cy="233.5" r="3.4" fill="var(--chart-aqua)" /><circle class="pt" data-series="Vans Inventory" data-week="2026-07-20" data-value="1310" data-index="72.7" cx="674.4" cy="246.9" r="3.4" fill="var(--chart-aqua)" /><circle class="pt" data-series="Vans Inventory" data-week="2026-07-27" data-value="1241" data-index="68.9" cx="764.2" cy="259.6" r="3.4" fill="var(--chart-aqua)" /><circle class="pt" data-series="Vans Inventory" data-week="2026-08-03" data-value="1170" data-index="65.0" cx="854.0" cy="272.6" r="3.4" fill="var(--chart-aqua)" />
+      <text x="854.0" y="45.7" text-anchor="end" font-family="var(--font-mono)" font-size="11" font-weight="600" fill="var(--chart-blue)">Search 130</text>
+      <text x="854.0" y="71.8" text-anchor="end" font-family="var(--font-mono)" font-size="11" font-weight="600" fill="var(--chart-orange)">Sales 122</text>
+      <text x="854.0" y="288.6" text-anchor="end" font-family="var(--font-mono)" font-size="11" font-weight="600" fill="var(--chart-aqua)">Vans Inv. 65</text>
+      <text x="46" y="332" font-family="var(--font-mono)" font-size="10" fill="var(--muted)">2026-06-01</text>
+      <text x="854" y="332" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--muted)">2026-08-03</text>
+    </svg>
+    <div class="legend">
+      <span><i style="background:var(--chart-blue)"></i>Search</span>
+      <span><i style="background:var(--chart-orange)"></i>Sales</span>
+      <span><i style="background:var(--chart-aqua)"></i>Vans Inventory</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Dealer inventory — 2026-08-03</h2>
+    <p class="sub">Current on-hand units per dealer in West Coast. PacSun - San Diego is the one to call.</p>
+    <svg class="chart" viewBox="0 0 900 230" role="img" aria-label="Bar chart of current dealer inventory: PacSun - San Diego at 28 units, Zumiez - Santa Monica at 63 units, Tilly's - Sacramento at 68 units.">
+      
+      <g>
+        <rect x="40.0" y="131.3" width="242.7" height="54.7" rx="4" fill="var(--status-critical)"/>
+        <text x="161.3" y="121.3" text-anchor="middle" font-family="var(--font-mono)" font-size="15" font-weight="600" fill="var(--ink)">28</text>
+        <text x="161.3" y="105.3" text-anchor="middle" font-family="var(--font-body)" font-size="10.5" font-weight="700" letter-spacing="0.06em" fill="var(--status-critical)">LOW STOCK</text>
+        <text x="161.3" y="206.0" text-anchor="middle" font-family="var(--font-body)" font-size="12" fill="var(--ink)" font-weight="600">PacSun - San Diego</text>
+        <text x="161.3" y="222.0" text-anchor="middle" font-family="var(--font-mono)" font-size="10.5" fill="var(--muted)">-69% over window</text>
+      </g>
+      <g>
+        <rect x="328.7" y="63.0" width="242.7" height="123.0" rx="4" fill="var(--muted-fill)"/>
+        <text x="450.0" y="53.0" text-anchor="middle" font-family="var(--font-mono)" font-size="15" font-weight="600" fill="var(--ink)">63</text>
+        
+        <text x="450.0" y="206.0" text-anchor="middle" font-family="var(--font-body)" font-size="12" fill="var(--ink)" font-weight="600">Zumiez - Santa Monica</text>
+        <text x="450.0" y="222.0" text-anchor="middle" font-family="var(--font-mono)" font-size="10.5" fill="var(--muted)">-10% over window</text>
+      </g>
+      <g>
+        <rect x="617.3" y="53.2" width="242.7" height="132.8" rx="4" fill="var(--muted-fill)"/>
+        <text x="738.7" y="43.2" text-anchor="middle" font-family="var(--font-mono)" font-size="15" font-weight="600" fill="var(--ink)">68</text>
+        
+        <text x="738.7" y="206.0" text-anchor="middle" font-family="var(--font-body)" font-size="12" fill="var(--ink)" font-weight="600">Tilly's - Sacramento</text>
+        <text x="738.7" y="222.0" text-anchor="middle" font-family="var(--font-mono)" font-size="10.5" fill="var(--muted)">+13% over window</text>
+      </g>
+    </svg>
+  </div>
+
+  <details class="why">
+    <summary>Why? — underlying evidence</summary>
+    <div class="why-body">
+      <div class="rule-box">
+        Rule: <b>Opportunity</b> = Search WoW↑ + Sales WoW↑ + Vans Inventory WoW↓, each ≥15% cumulative change over the window with ≥60% of weekly steps agreeing.<br/>
+        Result: Search <b>+29.9%</b> (100% consistency) ·
+        Sales <b>+22.1%</b> (100% consistency) ·
+        Vans Inventory <b>-35.0%</b> (100% consistency) →
+        confidence <b>96%</b>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Week</th><th>Searches</th><th>Views</th><th>Conv. rate</th><th>Units sold</th><th>Vans inventory</th><th>Returns</th><th>Sentiment</th></tr></thead>
+          <tbody><tr><td>2026-06-01</td><td>1,200</td><td>2,025</td><td>4.4%</td><td>140</td><td>1,801</td><td>10</td><td>+0.43</td></tr>
+<tr><td>2026-06-08</td><td>1,239</td><td>2,160</td><td>3.1%</td><td>143</td><td>1,731</td><td>8</td><td>+0.40</td></tr>
+<tr><td>2026-06-15</td><td>1,281</td><td>2,195</td><td>8.9%</td><td>147</td><td>1,659</td><td>9</td><td>+0.38</td></tr>
+<tr><td>2026-06-22</td><td>1,321</td><td>2,288</td><td>4.9%</td><td>150</td><td>1,590</td><td>9</td><td>+0.40</td></tr>
+<tr><td>2026-06-29</td><td>1,359</td><td>2,302</td><td>4.2%</td><td>154</td><td>1,520</td><td>7</td><td>+0.33</td></tr>
+<tr><td>2026-07-06</td><td>1,399</td><td>2,340</td><td>4.5%</td><td>157</td><td>1,450</td><td>10</td><td>+0.34</td></tr>
+<tr><td>2026-07-13</td><td>1,440</td><td>2,456</td><td>7.3%</td><td>161</td><td>1,381</td><td>8</td><td>+0.35</td></tr>
+<tr><td>2026-07-20</td><td>1,480</td><td>2,451</td><td>7.0%</td><td>164</td><td>1,310</td><td>9</td><td>+0.36</td></tr>
+<tr><td>2026-07-27</td><td>1,520</td><td>2,634</td><td>7.2%</td><td>167</td><td>1,241</td><td>10</td><td>+0.42</td></tr>
+<tr><td>2026-08-03</td><td>1,559</td><td>2,671</td><td>7.4%</td><td>171</td><td>1,170</td><td>10</td><td>+0.36</td></tr></tbody>
+        </table>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Dealer</th><th>Current units</th><th>Change over window</th><th>Status</th></tr></thead>
+          <tbody><tr><td>PacSun - San Diego</td><td>28</td><td>-68.9%</td><td>Flagged — low stock</td></tr>
+<tr><td>Zumiez - Santa Monica</td><td>63</td><td>-10.0%</td><td>Healthy</td></tr>
+<tr><td>Tilly's - Sacramento</td><td>68</td><td>+13.3%</td><td>Healthy</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <footer>
+    POC1 — synthetic data, deterministic rules only, no LLM yet. Product: Vans Knu Skool · Region: West Coast · Dealers tracked: 3.
+  </footer>
+
+</div>
+
+<div id="tooltip"></div>
+<script>
+  const tip = document.getElementById('tooltip');
+  document.querySelectorAll('.pt').forEach(function(c){
+    c.addEventListener('mouseenter', function(e){
+      const series = c.getAttribute('data-series');
+      const week = c.getAttribute('data-week');
+      const value = c.getAttribute('data-value');
+      const index = parseFloat(c.getAttribute('data-index')).toFixed(0);
+      tip.innerHTML = week + '<br>' + series + ': ' + Number(value).toLocaleString() + ' (index ' + index + ')';
+      tip.style.opacity = 1;
+      c.setAttribute('r', 5);
+    });
+    c.addEventListener('mousemove', function(e){
+      const rect = c.closest('.card').getBoundingClientRect();
+      tip.style.left = (e.clientX - rect.left + c.closest('.card').offsetLeft) + 'px';
+      tip.style.top = (e.clientY - rect.top + c.closest('.card').offsetTop) + 'px';
+    });
+    c.addEventListener('mouseleave', function(){
+      tip.style.opacity = 0;
+      c.setAttribute('r', 3.4);
+    });
+  });
+  document.querySelectorAll('.card').forEach(function(card){ card.style.position='relative'; });
+</script>

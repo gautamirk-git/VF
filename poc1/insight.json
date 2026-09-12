@@ -1,0 +1,296 @@
+{
+  "product": "Vans Knu Skool",
+  "region": "West Coast",
+  "week_start": "2026-06-01",
+  "week_end": "2026-08-03",
+  "situation_type": "Opportunity",
+  "triggered": true,
+  "confidence": 96,
+  "headline": "Revenue Opportunity \u2014 Vans Knu Skool, West Coast",
+  "narrative": "Search is up 30% and sales are up 22% over the last 10 weeks in West Coast, while Vans-side inventory has fallen 35%. PacSun - San Diego is also running low (28 units on hand, down 69% over the window) \u2014 reach out about reallocating or replenishing stock before this becomes a stockout.",
+  "signals": {
+    "search_cum_pct": 29.9,
+    "sales_cum_pct": 22.1,
+    "vans_inventory_cum_pct": -35.0,
+    "search_consistency": 1.0,
+    "sales_consistency": 1.0,
+    "inventory_consistency": 1.0
+  },
+  "recommendation": {
+    "action": "Flag for the stocker to contact the dealer(s) below about reallocating/replenishing stock.",
+    "dealers": [
+      {
+        "dealer": "PacSun - San Diego",
+        "current_units": 28,
+        "pct_change_over_window": -68.9,
+        "flagged_low": true
+      },
+      {
+        "dealer": "Zumiez - Santa Monica",
+        "current_units": 63,
+        "pct_change_over_window": -10.0,
+        "flagged_low": false
+      },
+      {
+        "dealer": "Tilly's - Sacramento",
+        "current_units": 68,
+        "pct_change_over_window": 13.3,
+        "flagged_low": false
+      }
+    ]
+  },
+  "evidence_weekly": [
+    {
+      "week_start": "2026-06-01",
+      "searches": 1200,
+      "views": 2025,
+      "conversion_rate": 0.0444,
+      "units_sold": 140,
+      "vans_inventory_units": 1801,
+      "returns": 10,
+      "review_sentiment": 0.427
+    },
+    {
+      "week_start": "2026-06-08",
+      "searches": 1239,
+      "views": 2160,
+      "conversion_rate": 0.0308,
+      "units_sold": 143,
+      "vans_inventory_units": 1731,
+      "returns": 8,
+      "review_sentiment": 0.396
+    },
+    {
+      "week_start": "2026-06-15",
+      "searches": 1281,
+      "views": 2195,
+      "conversion_rate": 0.0892,
+      "units_sold": 147,
+      "vans_inventory_units": 1659,
+      "returns": 9,
+      "review_sentiment": 0.383
+    },
+    {
+      "week_start": "2026-06-22",
+      "searches": 1321,
+      "views": 2288,
+      "conversion_rate": 0.049,
+      "units_sold": 150,
+      "vans_inventory_units": 1590,
+      "returns": 9,
+      "review_sentiment": 0.397
+    },
+    {
+      "week_start": "2026-06-29",
+      "searches": 1359,
+      "views": 2302,
+      "conversion_rate": 0.042,
+      "units_sold": 154,
+      "vans_inventory_units": 1520,
+      "returns": 7,
+      "review_sentiment": 0.333
+    },
+    {
+      "week_start": "2026-07-06",
+      "searches": 1399,
+      "views": 2340,
+      "conversion_rate": 0.0455,
+      "units_sold": 157,
+      "vans_inventory_units": 1450,
+      "returns": 10,
+      "review_sentiment": 0.342
+    },
+    {
+      "week_start": "2026-07-13",
+      "searches": 1440,
+      "views": 2456,
+      "conversion_rate": 0.0733,
+      "units_sold": 161,
+      "vans_inventory_units": 1381,
+      "returns": 8,
+      "review_sentiment": 0.347
+    },
+    {
+      "week_start": "2026-07-20",
+      "searches": 1480,
+      "views": 2451,
+      "conversion_rate": 0.0695,
+      "units_sold": 164,
+      "vans_inventory_units": 1310,
+      "returns": 9,
+      "review_sentiment": 0.36
+    },
+    {
+      "week_start": "2026-07-27",
+      "searches": 1520,
+      "views": 2634,
+      "conversion_rate": 0.0722,
+      "units_sold": 167,
+      "vans_inventory_units": 1241,
+      "returns": 10,
+      "review_sentiment": 0.416
+    },
+    {
+      "week_start": "2026-08-03",
+      "searches": 1559,
+      "views": 2671,
+      "conversion_rate": 0.0739,
+      "units_sold": 171,
+      "vans_inventory_units": 1170,
+      "returns": 10,
+      "review_sentiment": 0.364
+    }
+  ],
+  "evidence_dealer_weekly": [
+    {
+      "dealer": "PacSun - San Diego",
+      "week_start": "2026-06-01",
+      "dealer_inventory_units": 90
+    },
+    {
+      "dealer": "PacSun - San Diego",
+      "week_start": "2026-06-08",
+      "dealer_inventory_units": 83
+    },
+    {
+      "dealer": "PacSun - San Diego",
+      "week_start": "2026-06-15",
+      "dealer_inventory_units": 76
+    },
+    {
+      "dealer": "PacSun - San Diego",
+      "week_start": "2026-06-22",
+      "dealer_inventory_units": 69
+    },
+    {
+      "dealer": "PacSun - San Diego",
+      "week_start": "2026-06-29",
+      "dealer_inventory_units": 62
+    },
+    {
+      "dealer": "PacSun - San Diego",
+      "week_start": "2026-07-06",
+      "dealer_inventory_units": 55
+    },
+    {
+      "dealer": "PacSun - San Diego",
+      "week_start": "2026-07-13",
+      "dealer_inventory_units": 49
+    },
+    {
+      "dealer": "PacSun - San Diego",
+      "week_start": "2026-07-20",
+      "dealer_inventory_units": 42
+    },
+    {
+      "dealer": "PacSun - San Diego",
+      "week_start": "2026-07-27",
+      "dealer_inventory_units": 35
+    },
+    {
+      "dealer": "PacSun - San Diego",
+      "week_start": "2026-08-03",
+      "dealer_inventory_units": 28
+    },
+    {
+      "dealer": "Tilly's - Sacramento",
+      "week_start": "2026-06-01",
+      "dealer_inventory_units": 60
+    },
+    {
+      "dealer": "Tilly's - Sacramento",
+      "week_start": "2026-06-08",
+      "dealer_inventory_units": 61
+    },
+    {
+      "dealer": "Tilly's - Sacramento",
+      "week_start": "2026-06-15",
+      "dealer_inventory_units": 62
+    },
+    {
+      "dealer": "Tilly's - Sacramento",
+      "week_start": "2026-06-22",
+      "dealer_inventory_units": 63
+    },
+    {
+      "dealer": "Tilly's - Sacramento",
+      "week_start": "2026-06-29",
+      "dealer_inventory_units": 64
+    },
+    {
+      "dealer": "Tilly's - Sacramento",
+      "week_start": "2026-07-06",
+      "dealer_inventory_units": 64
+    },
+    {
+      "dealer": "Tilly's - Sacramento",
+      "week_start": "2026-07-13",
+      "dealer_inventory_units": 65
+    },
+    {
+      "dealer": "Tilly's - Sacramento",
+      "week_start": "2026-07-20",
+      "dealer_inventory_units": 66
+    },
+    {
+      "dealer": "Tilly's - Sacramento",
+      "week_start": "2026-07-27",
+      "dealer_inventory_units": 67
+    },
+    {
+      "dealer": "Tilly's - Sacramento",
+      "week_start": "2026-08-03",
+      "dealer_inventory_units": 68
+    },
+    {
+      "dealer": "Zumiez - Santa Monica",
+      "week_start": "2026-06-01",
+      "dealer_inventory_units": 70
+    },
+    {
+      "dealer": "Zumiez - Santa Monica",
+      "week_start": "2026-06-08",
+      "dealer_inventory_units": 69
+    },
+    {
+      "dealer": "Zumiez - Santa Monica",
+      "week_start": "2026-06-15",
+      "dealer_inventory_units": 68
+    },
+    {
+      "dealer": "Zumiez - Santa Monica",
+      "week_start": "2026-06-22",
+      "dealer_inventory_units": 68
+    },
+    {
+      "dealer": "Zumiez - Santa Monica",
+      "week_start": "2026-06-29",
+      "dealer_inventory_units": 67
+    },
+    {
+      "dealer": "Zumiez - Santa Monica",
+      "week_start": "2026-07-06",
+      "dealer_inventory_units": 66
+    },
+    {
+      "dealer": "Zumiez - Santa Monica",
+      "week_start": "2026-07-13",
+      "dealer_inventory_units": 65
+    },
+    {
+      "dealer": "Zumiez - Santa Monica",
+      "week_start": "2026-07-20",
+      "dealer_inventory_units": 65
+    },
+    {
+      "dealer": "Zumiez - Santa Monica",
+      "week_start": "2026-07-27",
+      "dealer_inventory_units": 64
+    },
+    {
+      "dealer": "Zumiez - Santa Monica",
+      "week_start": "2026-08-03",
+      "dealer_inventory_units": 63
+    }
+  ]
+}
